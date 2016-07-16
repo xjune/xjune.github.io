@@ -15,52 +15,37 @@
 
 
 
-<meta name="description" content="背景为什么采用github？[from  阮一峰]
+<meta name="description" content="Coursera ML 2
+ML lecture 2
+梯度下降
+特征缩放(Feature Scaling)
 
-
-第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。
-第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。
-
-为什么采用hexo框架？［from sunwhut］
-
-极速生成静态页面
-支持Markdown
-一键部署博客
-丰">
+Make sure features are on a similar scale.
+Get every feature into approximately a  \(-1 \leqslant x_i \leqslant 1 \) range. 
+目的：能让梯度下降法更快的收敛，收敛所需">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Create Blog">
-<meta property="og:url" content="https://xjune.github.io/2016/07/15/Create-Blog/index.html">
+<meta property="og:title" content="Coursera ML 2">
+<meta property="og:url" content="https://xjune.github.io/2016/07/16/Coursera-ML-2-1/index.html">
 <meta property="og:site_name" content="Xjune">
-<meta property="og:description" content="背景为什么采用github？[from  阮一峰]
+<meta property="og:description" content="Coursera ML 2
+ML lecture 2
+梯度下降
+特征缩放(Feature Scaling)
 
-
-第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。
-第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。
-
-为什么采用hexo框架？［from sunwhut］
-
-极速生成静态页面
-支持Markdown
-一键部署博客
-丰">
-<meta property="og:updated_time" content="2016-07-15T02:07:09.000Z">
+Make sure features are on a similar scale.
+Get every feature into approximately a  \(-1 \leqslant x_i \leqslant 1 \) range. 
+目的：能让梯度下降法更快的收敛，收敛所需">
+<meta property="og:updated_time" content="2016-07-16T01:13:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Create Blog">
-<meta name="twitter:description" content="背景为什么采用github？[from  阮一峰]
+<meta name="twitter:title" content="Coursera ML 2">
+<meta name="twitter:description" content="Coursera ML 2
+ML lecture 2
+梯度下降
+特征缩放(Feature Scaling)
 
-
-第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。
-第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。
-
-为什么采用hexo框架？［from sunwhut］
-
-极速生成静态页面
-支持Markdown
-一键部署博客
-丰">
+Make sure features are on a similar scale.
+Get every feature into approximately a  \(-1 \leqslant x_i \leqslant 1 \) range. 
+目的：能让梯度下降法更快的收敛，收敛所需">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -92,7 +77,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Create Blog | Xjune</title>
+<title>Coursera ML 2 | Xjune</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -296,11 +281,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Create-Blog" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Coursera-ML-2-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/15/Create-Blog/" class="article-date">
-      <time datetime="2016-07-15T01:53:45.000Z" itemprop="datePublished">2016-07-15</time>
+      <a href="/2016/07/16/Coursera-ML-2-1/" class="article-date">
+      <time datetime="2016-07-16T00:57:37.000Z" itemprop="datePublished">2016-07-16</time>
 </a>
 
 
@@ -315,7 +300,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Create Blog
+      Coursera ML 2
     </h1>
   
 
@@ -326,7 +311,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/配置/">配置</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Coursera-ML/">Coursera ML</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -336,75 +321,78 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><strong>为什么采用github？[from  <a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">阮一峰</a>]
-</strong></p>
-<ul>
-<li>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</li>
-<li>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</li>
-<li>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</li>
+        <p></p><h1>Coursera ML 2</h1><p></p>
+<p></p><h2>ML lecture 2</h2><br><br><p></p>
+<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><ul>
+<li>特征缩放(Feature Scaling)</li>
 </ul>
-<p><strong>为什么采用hexo框架？［from <a href="http://sunwhut.com/2015/10/30/buildBlog/" target="_blank" rel="external">sunwhut</a>］</strong></p>
+<p>Make sure features are on a similar scale.</p>
+<p>Get every feature into approximately a  \(-1 \leqslant x_i \leqslant 1 \) range. </p>
+<p>目的：能让梯度下降法更快的收敛，收敛所需循环次数减少。</p>
+<p><strong>均值归一化(mean normalization)</strong></p>
+<p>replace \(x_i\) with \(x_i - u_i \)to make features have approximately zero mean(Do not apply to \(x_0=1\)).</p>
+<p>$$x_i \Leftarrow \frac{(x_i - u_i)}{s_i}$$</p>
+<p>\(u_i\): avg value of feature \(x_i\) in training set</p>
+<p>\(s_i\): range (max - min) of feature \(x_i\) (or standarrd deviation)</p>
 <ul>
-<li>极速生成静态页面</li>
-<li>支持Markdown</li>
-<li>一键部署博客</li>
-<li>丰富的插件支持</li>
-</ul>
-<h2 id="本地环境搭建"><a href="#本地环境搭建" class="headerlink" title="本地环境搭建"></a><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">本地环境搭建</a></h2><p>本文命令基于mac os，windows用户采用教程：</p>
+<li><p>Update rule</p>
+<p>  \(\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j}J(\theta)\)</p>
 <ul>
-<li><a href="http://sunwhut.com/2015/10/30/buildBlog/" target="_blank" rel="external">sunwhut</a></li>
-<li><a href="http://blog.shijinrong.cn/2016/01/03/How-to-build-a-blog/" target="_blank" rel="external">石金融</a></li>
-</ul>
-<p>####前提</p>
+<li><p>“Debugging”: How to make sure gradient descent is working correctly.</p>
 <ul>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li><a href="https://git-scm.com/downloads" target="_blank" rel="external">Git</a></li>
-<li><a href="https://desktop.github.com/" target="_blank" rel="external">GitHub Desktop (可选)</a></li>
-<li>Xcode（mac os  appstore）</li>
+<li>\(\theta - minJ(\theta)曲线图\)</li>
+<li><p>自动判别是否收敛<br>曲线图<br>  设置阈值： if \(J(\theta)\) decreases by less than \(10^{-3}\) in one iteration.</p>
+<p>  曲线随x值增加而增大， 曲线呈抛物线形状周期性出现.<br>  可使用更小的\(\alpha\)</p>
+<ul>
+<li>For sufficiently small \(\alpha, J(\theta)\)should decrease on every iteration.</li>
+<li>But if \(\alpha\) is too small, gradient descent can be slow to converge.</li>
 </ul>
-<p>####安装Hexo<br>    npm install hexo -g<br>安装完成后，在任意目录下创建子目录，即为本地博客目录：</p>
-<pre><code>cd ~ #这里就是你的任意目录，~为用户根目录
-mkdir MyBlog #可任意命名
-cd MyBlog #打开博客目录
-</code></pre><p>执行以下命令初始化本地博客：</p>
-<pre><code>hexo init
-npm install
-hexo s #启动本地服务器测试, 查看样式
-</code></pre><p>打开浏览器，输入<code>http://localhost:4000</code>,查看本地网站样式。</p>
-<p>####<a href="https://hexo.io/themes/" target="_blank" rel="external">主题选取</a><br><a href="https://hexo.io/docs/themes.html" target="_blank" rel="external">主题更换流程</a></p>
-<p>在根目录的themes文件夹中，找到你的博客主题，修改其中的_config.yml。</p>
-<h2 id="链接到Github"><a href="#链接到Github" class="headerlink" title="链接到Github"></a>链接到Github</h2><p>####<a href="https://pages.github.com/" target="_blank" rel="external">配置git环境</a></p>
-<p>####上传博客<br>在本地文件夹内，修改站点配置文件: <code>_config.yml</code>   ［位于文尾］添加下列文本</p>
-<pre><code>deploy:
-   type: git 部署类型若有问题，其他类型自行google之
-   repository: https://github.com/Aierui/aierui.github.io.git
-   branch: master
-   plugins: -hexo-generator-feed
-</code></pre><p>保存退出之后，使用git命令</p>
-<pre><code>hexo g
-hexo d
-</code></pre><p><a href="https://github.com/hexojs/hexo/issues/1040" target="_blank" rel="external">ERROR Deployer not found: github</a></p>
-<p>####<a href="http://blog.shijinrong.cn/2016/01/03/How-to-build-a-blog/" target="_blank" rel="external">域名绑定</a></p>
-<h2 id="博客使用"><a href="#博客使用" class="headerlink" title="博客使用"></a>博客使用</h2><p>####页面编写工具</p>
-<p><a href="https://cloud.smartisan.com/apps/note/md.html" target="_blank" rel="external">Markdown使用</a></p>
-<p><a href="http://blog.kamidox.com/write-math-formula-with-mathjax.html" target="_blank" rel="external">markdown + LaTex使用语法</a></p>
-<p><a href="http://mlworks.cn/posts/introduction-to-mathjax-and-latex-expression/" target="_blank" rel="external">LaTex符号</a></p>
-<p><a href="http://detexify.kirelabs.org/classify.html" target="_blank" rel="external">手写符号查找LaTex</a></p>
-<p>####<a href="http://ruikye.com/2014/08/29/Hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%C2%B7-%E5%9F%BA%E7%A1%80%E7%AF%87/" target="_blank" rel="external">上传博文</a><br>    hexo new post “article title”<br>这条命令会在你的博客目录的 source/_posts 下生成一个 article-title.md 的文件，用编辑器打开就可以编辑文章了。</p>
-<p>Hexo 使用的 Markdown 语法，这里推荐几种编写 Markdown 的编辑器：<br>Window: MarkdownPad2<br>Mac: Mou<br>Linux: ReText<br>多平台：Sublime Text + MarkdownEditting(插件)</p>
-<p>文章编辑好之后，运行生成、部署命令：</p>
-<pre><code>$ hexo g   // 生成
-$ hexo d   // 部署
-</code></pre><p>在浏览器中刷新博客，就可以看到，由于 Github 的缓存机制，可能要多刷新几次才能看到。</p>
-<p>####<a href="http://stackoverflow.com/questions/27894210/how-do-i-delete-a-post-in-hexo" target="_blank" rel="external">删除博文</a></p>
-<p>There is no command to delete a post on Hexo, but follow this steps :</p>
-<ol>
-<li>Delete the post under <code>source/_post</code> folder</li>
-<li>Run <code>hexo clean</code> to delete the database (db.json) and assets folder</li>
-<li>Run <code>hexo generate</code> to generate the new blog without your deleted post</li>
-<li>Run <code>hexo deploy</code> to deploy your blog</li>
-</ol>
-<p>Alternatively you can use the hexo-admin plugin.</p>
+</li>
+</ul>
+</li>
+<li>How to choose learning rate \(\alpha\)</li>
+</ul>
+</li>
+<li><p>正规方程(Normal Equation)</p>
+</li>
+</ul>
+<p>$$ \theta \in R^{n+1} $$<br>$$ J(\theta_0,\theta_1,…,\theta_m) = \frac1{2m} \sum\limits_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2$$<br>$$ \frac{\partial}{\partial\theta_j}J(\theta) = …= 0 (for every j)$$<br>Solve for \(\theta_0, \theta_1, …, \theta_n\)</p>
+<p>$$\theta = (X^T X)^{-1}X^Ty$$<br>\((X^TX)^{-1}\) is inverse of matrix \(X^TX.\)</p>
+<p>若使用正规方程，则不需要归一化特征变量</p>
+<p><strong>延伸</strong><br>Normal Equation Noninvertibility(正规方程的不可逆性)</p>
+<p>What if \(X^TX\) is non-invertible?</p>
+<ul>
+<li><p>Redundant features (linearly dependent)<br>  重复的属性，删除</p>
+</li>
+<li><p>Too many features (e.g. \(m \leqslant n)\)</p>
+<ul>
+<li>Delete some features, or use regularization. </li>
+</ul>
+</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
+<li>If \(\alpha\) is too small: slow convergence.</li>
+<li>If \(\alpha\) is too large: \(J(\theta)\) may not decrease on every iteration; may not converge.</li>
+</ul>
+<p>To choose \(\alpha\), 最小到最大可能学习率。3倍增加，找出最合适的学习率。</p>
+<p>m training examples, n features.</p>
+<p>Gradient Descent</p>
+<ul>
+<li>Need to choose \(\alpha\)</li>
+<li><p>Needs many iterations.</p>
+</li>
+<li><p>Works well even when n is large.</p>
+</li>
+</ul>
+<p>Normal Equation</p>
+<ul>
+<li>No need to choose \(\alpha\)</li>
+<li><p>Don’t need to iterate</p>
+</li>
+<li><p>Need to compute \((X^TX)^{-1}\)</p>
+</li>
+<li>Slow if n is very large.</li>
+</ul>
 
       
     </div>
@@ -413,13 +401,13 @@ $ hexo d   // 部署
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/15/Create-Blog/">Create Blog</a></p>
+        <p><span>本文标题:</span><a href="/2016/07/16/Coursera-ML-2-1/">Coursera ML 2</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Gemma</a></p>
-        <p><span>发布时间:</span>2016-07-15, 09:53:45</p>
-        <p><span>最后更新:</span>2016-07-15, 10:07:09</p>
+        <p><span>发布时间:</span>2016-07-16, 08:57:37</p>
+        <p><span>最后更新:</span>2016-07-16, 09:13:06</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/15/Create-Blog/" title="Create Blog">https://xjune.github.io/2016/07/15/Create-Blog/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://xjune.github.io/2016/07/15/Create-Blog/　　作者: Gemma" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/16/Coursera-ML-2-1/" title="Coursera ML 2">https://xjune.github.io/2016/07/16/Coursera-ML-2-1/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://xjune.github.io/2016/07/16/Coursera-ML-2-1/　　作者: Gemma" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -431,16 +419,10 @@ $ hexo d   // 部署
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/16/Coursera-ML-2-1/">
-                    Coursera ML 2
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/15/Coursera-ML-2/">
-                    Coursera ML 1.2
+                <a href="/2016/07/15/Create-Blog/">
+                    Create Blog
                 </a>
             </div>
         
@@ -451,7 +433,7 @@ $ hexo d   // 部署
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地环境搭建"><span class="toc-number">2.</span> <span class="toc-text">本地环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接到Github"><span class="toc-number">3.</span> <span class="toc-text">链接到Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客使用"><span class="toc-number">4.</span> <span class="toc-text">博客使用</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Coursera ML 2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">ML lecture 2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#梯度下降"><span class="toc-number">1.2.</span> <span class="toc-text">梯度下降</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">1.3.</span> <span class="toc-text">Conclusion</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -482,7 +464,7 @@ $ hexo d   // 部署
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Create Blog　| Xjune　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Coursera ML 2　| Xjune　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -502,15 +484,13 @@ $ hexo d   // 部署
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/16/Coursera-ML-2-1/" title="上一篇: Coursera ML 2">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/15/Coursera-ML-2/" title="下一篇: Coursera ML 1.2">
+            <a href="/2016/07/15/Create-Blog/" title="下一篇: Create Blog">
                 <i class="fa fa-angle-right"></i>
             </a>
         
